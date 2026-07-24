@@ -1,0 +1,1 @@
+console.log("Welcome to GreatChy Gifts & Decor!");
