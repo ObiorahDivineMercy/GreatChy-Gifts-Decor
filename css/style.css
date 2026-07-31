@@ -171,9 +171,95 @@ body {
 }
 
 .hero-image img{
+     width:100%;
+    max-width:400px;
+    height:auto;
+    display:block;
+    margin:0 auto;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+
+}
+/* ==========================
+   SHOP BY CATEGORY
+========================== */
+
+.categories{
+
+    padding:80px 60px;
+
+    text-align:center;
+
+}
+
+.categories h2{
+
+    font-family:"Playfair Display", serif;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    color:#333;
+
+}
+
+.category-subtitle{
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:50px;
+
+}
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+.category-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+
+    cursor:pointer;
+
+}
+.category-card:hover{
+
+    transform:translateY(-10px);
+
+}
+.category-card img{
 
     width:100%;
-     margin-top:20px;
-    border-radius:20px;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+.category-card h3{
+
+    padding:20px;
+
+    font-size:20px;
+
+    color:#333;
 
 }
