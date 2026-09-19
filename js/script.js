@@ -29,7 +29,7 @@ function openModal(product) {
     if (product === "flowers") {
 
         image.src =
-            "images/categories/tailoring materials/flowers.jpg";
+            "images/categories/tailoring materials/Flowers.jpg";
 
         title.textContent =
             "Flowers";
@@ -47,7 +47,7 @@ function openModal(product) {
             price: 500,
 
             image:
-                "images/categories/tailoring materials/flowers.jpg",
+                "images/categories/tailoring materials/Flowers.jpg",
 
             quantity: 1
 
@@ -189,7 +189,7 @@ function openModal(product) {
     else if (product === "aplique") {
 
         image.src =
-            "images/categories/tailoring materials/aplique.jpg";
+            "images/categories/tailoring materials/Aplique.jpg";
 
         title.textContent =
             "Aplique";
@@ -207,7 +207,7 @@ function openModal(product) {
             price: 10000,
 
             image:
-                "images/categories/tailoring materials/aplique.jpg",
+                "images/categories/tailoring materials/Aplique.jpg",
 
             quantity: 1
 
@@ -221,7 +221,7 @@ function openModal(product) {
     else if (product === "fringe") {
 
         image.src =
-            "images/categories/tailoring materials/fringe.jpg";
+            "images/categories/tailoring materials/Fringe.jpg";
 
         title.textContent =
             "Fringe";
@@ -239,7 +239,7 @@ function openModal(product) {
             price: 2500,
 
             image:
-                "images/categories/tailoring materials/fringe.jpg",
+                "images/categories/tailoring materials/Fringe.jpg",
 
             quantity: 1
 
@@ -253,7 +253,7 @@ function openModal(product) {
     else if (product === "aba-linen") {
 
         image.src =
-            "images/categories/tailoring materials/linen.jpg";
+            "images/categories/tailoring materials/Aba Linen.jpg";
 
         title.textContent =
             "Aba Linen";
@@ -271,7 +271,7 @@ function openModal(product) {
             price: 500,
 
             image:
-                "images/categories/tailoring materials/linen.jpg",
+                "images/categories/tailoring materials/Aba Linen.jpg",
 
             quantity: 1
 
@@ -285,7 +285,7 @@ function openModal(product) {
     else if (product === "mp4-linen") {
 
         image.src =
-            "images/categories/tailoring materials/linen.jpg";
+            "images/categories/tailoring materials/MP4 Linen.jpg";
 
         title.textContent =
             "MP4 Linen";
@@ -303,7 +303,7 @@ function openModal(product) {
             price: 500,
 
             image:
-                "images/categories/tailoring materials/linen.jpg",
+                "images/categories/tailoring materials/MP4 Linen.jpg",
 
             quantity: 1
 
@@ -317,7 +317,7 @@ function openModal(product) {
     else if (product === "mbj-linen") {
 
         image.src =
-            "images/categories/tailoring materials/linen.jpg";
+            "images/categories/tailoring materials/MBJ Linen.jpg";
 
         title.textContent =
             "MBJ Linen";
@@ -335,7 +335,7 @@ function openModal(product) {
             price: 1000,
 
             image:
-                "images/categories/tailoring materials/linen.jpg",
+                "images/categories/tailoring materials/MBJ Linen.jpg",
 
             quantity: 1
 
@@ -349,7 +349,7 @@ function openModal(product) {
     else if (product === "satin") {
 
         image.src =
-            "images/categories/tailoring materials/satin.jpg";
+            "images/categories/tailoring materials/Satin.jpg";
 
         title.textContent =
             "Satin";
@@ -367,7 +367,7 @@ function openModal(product) {
             price: 1200,
 
             image:
-                "images/categories/tailoring materials/satin.jpg",
+                "images/categories/tailoring materials/Satin.jpg",
 
             quantity: 1
 
@@ -532,3 +532,46 @@ window.addEventListener(
 
     }
 );
+
+/* CONTACT FORM */
+
+emailjs.init("nFYQVCi2At8vVBwFd");
+
+const contactForm =
+    document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener(
+        "submit",
+        function (event) {
+            event.preventDefault();
+
+    emailjs.sendForm(
+        "service_mhv9r46",
+        "template_lieq7sh",
+        this
+)
+            .then(function () {
+
+                alert(
+                    "Message sent successfully! ❤️"
+                );
+
+                contactForm.reset();
+
+            })
+            .catch(function (error) {
+
+                console.error(
+                    "Email error:",
+                    error
+                );
+
+                alert(
+                    "Sorry, your message could not be sent. Please try again."
+                );
+
+            });
+        }
+    );
+}

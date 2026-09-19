@@ -196,7 +196,7 @@
                         onclick="filterProducts('flowers')">
 
                         <img
-                            src="images/categories/tailoring materials/flowers.jpg"
+                            src="images/categories/tailoring materials/Flowers.jpg"
                             alt="Flowers">
 
                         <h3>
@@ -264,7 +264,7 @@
                         onclick="filterProducts('tailoring-materials')">
 
                         <img
-                            src="images/categories/tailoring materials/linen.jpg"
+                            src="images/categories/tailoring materials/Aba Linen.jpg"
                             alt="Tailoring Materials">
 
                         <h3>
@@ -439,7 +439,7 @@
                         data-category="flowers tailoring-materials">
 
                         <img
-                            src="images/categories/tailoring materials/flowers.jpg"
+                            src="images/categories/tailoring materials/Flowers.jpg"
                             alt="Flowers">
 
                         <div class="product-info">
@@ -624,7 +624,7 @@
                         data-category="tailoring-materials">
 
                         <img
-                            src="images/categories/tailoring materials/aplique.jpg"
+                            src="images/categories/tailoring materials/Aplique.jpg"
                             alt="Aplique">
 
                         <div class="product-info">
@@ -661,7 +661,7 @@
                         data-category="tailoring-materials">
 
                         <img
-                            src="images/categories/tailoring materials/fringe.jpg"
+                            src="images/categories/tailoring materials/Fringe.jpg"
                             alt="20-inch Fringe">
 
                         <div class="product-info">
@@ -698,7 +698,7 @@
                         data-category="tailoring-materials">
 
                         <img
-                            src="images/categories/tailoring materials/linen.jpg"
+                            src="images/categories/tailoring materials/Aba Linen.jpg"
                             alt="Aba Linen">
 
                         <div class="product-info">
@@ -735,7 +735,7 @@
                         data-category="tailoring-materials">
 
                         <img
-                            src="images/categories/tailoring materials/linen.jpg"
+                            src="images/categories/tailoring materials/MP4 Linen.jpg"
                             alt="MP4 Linen">
 
                         <div class="product-info">
@@ -772,7 +772,7 @@
                         data-category="tailoring-materials">
 
                         <img
-                            src="images/categories/tailoring materials/linen.jpg"
+                            src="images/categories/tailoring materials/MBJ Linen.jpg"
                             alt="MBJ Linen">
 
                         <div class="product-info">
@@ -809,7 +809,7 @@
                         data-category="tailoring-materials">
 
                         <img
-                            src="images/categories/tailoring materials/satin.jpg"
+                            src="images/categories/tailoring materials/Satin.jpg"
                             alt="Satin">
 
                         <div class="product-info">
@@ -1152,21 +1152,28 @@
                     </div>
 
 
-                    <form class="contact-form">
+                    <!-- CONTACT FORM -->
+
+                    <form
+                        class="contact-form"
+                        id="contactForm">
 
                         <input
                             type="text"
+                            name="from_name"
                             placeholder="Your Name"
                             required>
 
 
                         <input
                             type="email"
+                            name="from_email"
                             placeholder="Your Email"
                             required>
 
 
                         <textarea
+                            name="message"
                             placeholder="Your Message"
                             required></textarea>
 
@@ -1279,6 +1286,10 @@
 
 
     <!-- JAVASCRIPT -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 
     <script src="js/script.js"></script>
 
