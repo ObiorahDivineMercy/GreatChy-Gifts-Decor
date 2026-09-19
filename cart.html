@@ -1,70 +1,146 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Your Cart | GreatChy Gifts & Decor</title>
+<title>Your Cart | GreatChy Gifts & Decor</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+```
 
 </head>
 
 <body>
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="container">
-        <h1 class="logo">
-            GreatChy Gifts & Decor
-        </h1>
+
+```
+<!--  NAVBAR  -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            GreatChy
+            <span>Gifts & Decor</span>
+        </div>
+
 
         <ul class="nav-links">
 
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="cart.html">Cart 🛒</a></li>
+            <li>
+                <a href="index.html#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#shop">
+                    Shop
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#categories">
+                    Categories
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    Contact
+                </a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    Cart 🛒
+                </a>
+            </li>
+
         </ul>
-    </div>
-</nav>
-<!-- CART SECTION  -->
-<section class="cart-section">
-    <div class="container">
-        <h2>Your Cart</h2>
-        <div id="cart-items">
 
-</div>
-<div class="cart-summary">
+    </nav>
 
-    <h3>Cart Summary</h3>
-
-    <p>
-        Total: <span id="cart-total">₦0</span>
-    </p>
+</header>
 
 
-    <div class="cart-buttons">
+<!--  CART SECTION  -->
 
-        <a href="index.html" class="continue-btn">
-            Continue Shopping
-        </a>
+<main>
+
+    <section class="cart-section">
+
+        <div class="container">
+
+            <h2>
+                Your Cart
+            </h2>
 
 
-        <a href="checkout.html" class="checkout-btn">
-    Proceed to Checkout
-</a>
-    </div>
+            <div id="cart-items">
+                <!-- Cart items will be loaded by cart.js -->
+            </div>
 
 
-</div>
-    </div>
-</section>
+            <!-- CART SUMMARY -->
+
+            <div class="cart-summary">
+
+                <h3>
+                    Cart Summary
+                </h3>
+
+
+                <p>
+                    Total:
+                    <span id="cart-total">
+                        ₦0
+                    </span>
+                </p>
+
+
+                <div class="cart-buttons">
+
+                    <a
+                        href="index.html#shop"
+                        class="continue-btn">
+                        Continue Shopping
+                    </a>
+
+
+                    <a
+                        href="checkout.html"
+                        class="checkout-btn">
+                        Proceed to Checkout
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
 
 <script src="js/cart.js"></script>
+```
 
 </body>
 

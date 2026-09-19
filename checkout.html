@@ -1,151 +1,223 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Checkout | GreatChy Gifts & Decor
-    </title>
 
-    <link rel="stylesheet" href="css/style.css">
+```
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | GreatChy Gifts & Decor</title>
+
+<link rel="stylesheet" href="css/style.css">
+```
 
 </head>
-<body>
-<!--  NAVBAR -->
 
-<nav class="navbar">
-    <div class="container">
+<body>
+
+```
+<!-- NAVBAR  -->
+
+<header>
+
+    <nav class="navbar">
+
         <div class="logo">
             GreatChy
-            <span>
-                Gifts & Decor
-            </span>
+            <span>Gifts & Decor</span>
         </div>
+
         <ul class="nav-links">
+
             <li>
-                <a href="index.html">
+                <a href="index.html#home">
                     Home
                 </a>
             </li>
+
             <li>
-                <a href="index.html">
+                <a href="index.html#shop">
                     Shop
                 </a>
             </li>
+
             <li>
-                <a href="index.html">
+                <a href="index.html#categories">
                     Categories
                 </a>
             </li>
+
             <li>
-                <a href="index.html">
+                <a href="index.html#about">
                     About
                 </a>
             </li>
+
             <li>
-                <a href="index.html">
+                <a href="index.html#contact">
                     Contact
                 </a>
             </li>
+
             <li>
                 <a href="cart.html">
                     Cart 🛒
                 </a>
             </li>
+
         </ul>
-    </div>
-</nav>
-<!--  CHECKOUT SECTION  -->
-<section class="checkout-section">
-<div class="container">
-<h2>
-    Complete Your Order
-</h2>
-<div class="checkout-container">
 
-<!-- CUSTOMER DETAILS -->
-<div class="checkout-form">
-<h3>
-    Customer Information
-</h3>
-<form id="checkout-form">
-<input 
-type="text" 
-placeholder="Full Name">
-<input 
-type="tel" 
-placeholder="Phone Number">
-<input 
-type="email" 
-placeholder="Email Address">
+    </nav>
 
-<textarea 
-placeholder="Delivery Address">
-</textarea>
-
-<h3>
-    Payment Method
-</h3>
-
-<div class="payment-options">
-
-    <label class="payment-option">
-        <input 
-        type="radio" 
-        name="payment">
-        <span>
-            Bank Transfer
-        </span>
-
-    </label>
-
-    <label class="payment-option">
-        <input 
-        type="radio" 
-        name="payment">
-
-        <span>
-            Cash on Delivery
-        </span>
-
-    </label>
-
-</div>
-<button type="submit">
-
-    Place Order 🎁
-</button>
+</header>
 
 
-</form>
-</div>
+<!-- CHECKOUT SECTION  -->
 
-<!-- ORDER SUMMARY -->
-<div class="order-summary">
-<h3>
-    Your Order
-</h3>
+<main>
 
-<div id="checkout-items">
+    <section class="checkout-section">
 
-</div>
+        <div class="container">
 
-<div class="checkout-total">
+            <h2>
+                Complete Your Order
+            </h2>
 
-<h3>
-Total:
-<span id="checkout-total">
-₦0
-</span>
-</h3>
-</div>
-</div>
-</div>
-</div>
-</section>
+
+            <div class="checkout-container">
+
+                <!-- CUSTOMER DETAILS -->
+
+                <div class="checkout-form">
+
+                    <h3>
+                        Customer Information
+                    </h3>
+
+
+                    <form id="checkout-form">
+
+                        <input
+                            type="text"
+                            name="fullName"
+                            placeholder="Full Name"
+                            required>
+
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                            required>
+
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email Address"
+                            required>
+
+
+                        <textarea
+                            name="address"
+                            placeholder="Delivery Address"
+                            required></textarea>
+
+
+                        <!-- PAYMENT METHOD -->
+
+                        <h3>
+                            Payment Method
+                        </h3>
+
+
+                        <div class="payment-options">
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="Bank Transfer"
+                                    required>
+
+                                <span>
+                                    Bank Transfer
+                                </span>
+
+                            </label>
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="Cash on Delivery">
+
+                                <span>
+                                    Cash on Delivery
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <button type="submit">
+                            Place Order 🎁
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ORDER SUMMARY -->
+
+                <div class="order-summary">
+
+                    <h3>
+                        Your Order
+                    </h3>
+
+
+                    <div id="checkout-items">
+                        <!-- Cart items will be loaded by checkout.js -->
+                    </div>
+
+
+                    <div class="checkout-total">
+
+                        <h3>
+                            Total:
+                            <span id="checkout-total">
+                                ₦0
+                            </span>
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
 
 <script src="js/checkout.js"></script>
+```
+
 </body>
 
 </html>

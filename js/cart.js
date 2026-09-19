@@ -1,177 +1,187 @@
 console.log("Cart page loaded 🛒");
 
+/* LOAD CART  */
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
 
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 
 
-let total = 0;
+/* DISPLAY CART  */
 
+function displayCart() {
 
+    cartItems.innerHTML = "";
 
-if(cart.length === 0){
+    let total = 0;
 
-    cartItems.innerHTML = `
+    if (cart.length === 0) {
 
-        <p>Your cart is currently empty.</p>
+        cartItems.innerHTML = `
+            <div class="empty-cart">
 
-        <a href="index.html" class="view-btn">
-            Continue Shopping
-        </a>
+                <p>
+                    Your cart is currently empty.
+                </p>
 
-    `;
+                <a href="index.html#shop" class="view-btn">
+                    Continue Shopping
+                </a>
 
-}
+            </div>
+        `;
 
+        cartTotal.textContent = "₦0";
 
-
-else {
+        return;
+    }
 
 
     cart.forEach((product, index) => {
 
+        /* Make sure every product has a quantity */
 
-        // Makes old saved products have quantity
-        if(!product.quantity){
+        if (!product.quantity || product.quantity < 1) {
             product.quantity = 1;
         }
 
 
-        // Calculate total with quantity
-        total += product.price * product.quantity;
+        const subtotal =
+            product.price * product.quantity;
 
+        total += subtotal;
 
 
         cartItems.innerHTML += `
 
+            <div class="cart-item">
 
-        <div class="cart-item">
+                <img
+                    src="${product.image}"
+                    alt="${product.name}">
 
+                <div class="cart-details">
 
-            <img src="${product.image}" 
-            alt="${product.name}">
+                    <h3>
+                        ${product.name}
+                    </h3>
 
+                    <p>
+                        ₦${product.price.toLocaleString()}
+                    </p>
 
+                    <div class="quantity">
 
-            <div class="cart-details">
+                        <button
+                            type="button"
+                            onclick="decreaseQuantity(${index})">
+                            −
+                        </button>
 
+                        <span>
+                            ${product.quantity}
+                        </span>
 
-                <h3>${product.name}</h3>
+                        <button
+                            type="button"
+                            onclick="increaseQuantity(${index})">
+                            +
+                        </button>
 
+                    </div>
 
-                <p>
-                    ₦${product.price.toLocaleString()}
-                </p>
+                    <p>
+                        Subtotal:
+                        ₦${subtotal.toLocaleString()}
+                    </p>
 
-
-
-                <div class="quantity">
-
-
-                    <button onclick="decreaseQuantity(${index})">
-                        -
+                    <button
+                        type="button"
+                        onclick="removeItem(${index})">
+                        Remove
                     </button>
-
-
-
-                    <span>
-                        ${product.quantity}
-                    </span>
-
-
-
-                    <button onclick="increaseQuantity(${index})">
-                        +
-                    </button>
-
 
                 </div>
 
-
-
-
-                <p>
-                    Subtotal:
-                    ₦${(product.price * product.quantity).toLocaleString()}
-                </p>
-
-
-
-
-                <button onclick="removeItem(${index})">
-                    Remove
-                </button>
-
-
-
             </div>
 
-
-        </div>
-
-
         `;
-
-
-
     });
 
 
-
-    // Save quantity updates
-    localStorage.setItem(
-        "cart",
-        JSON.stringify(cart)
-    );
-
-}
+    cartTotal.textContent =
+        "₦" + total.toLocaleString();
 
 
-
-cartTotal.textContent = 
-"₦" + total.toLocaleString();
-
-
-
-
-
-
-function increaseQuantity(index){
-
-
-    cart[index].quantity++;
-
+    /* Save any quantity corrections */
 
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
-
-
-    location.reload();
-
-
 }
 
 
+/* INCREASE QUANTITY */
+
+function increaseQuantity(index) {
+
+    if (!cart[index]) {
+        return;
+    }
+
+    cart[index].quantity =
+        (cart[index].quantity || 1) + 1;
 
 
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
 
 
+    displayCart();
+}
 
-function decreaseQuantity(index){
+
+/* DECREASE QUANTITY  */
+
+function decreaseQuantity(index) {
+
+    if (!cart[index]) {
+        return;
+    }
 
 
-    if(cart[index].quantity > 1){
+    if (cart[index].quantity > 1) {
 
         cart[index].quantity--;
 
     }
 
 
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    displayCart();
+}
+
+
+/* REMOVE ITEM  */
+
+function removeItem(index) {
+
+    if (!cart[index]) {
+        return;
+    }
+
+
+    cart.splice(index, 1);
+
 
     localStorage.setItem(
         "cart",
@@ -179,32 +189,10 @@ function decreaseQuantity(index){
     );
 
 
-    location.reload();
-
-
+    displayCart();
 }
 
 
+/* INITIAL DISPLAY  */
 
-
-
-
-
-
-function removeItem(index){
-
-
-    cart.splice(index,1);
-
-
-
-    localStorage.setItem(
-        "cart",
-        JSON.stringify(cart)
-    );
-
-
-    location.reload();
-
-
-}
+displayCart();
