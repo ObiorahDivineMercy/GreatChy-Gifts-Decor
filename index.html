@@ -107,7 +107,7 @@
     <main>
 
 
-        <!--  HERO SECTION  -->
+        <!-- HERO SECTION -->
 
         <section
             class="hero"
@@ -165,7 +165,7 @@
 
 
 
-        <!-- SHOP BY CATEGORY  -->
+        <!-- SHOP BY CATEGORY -->
 
         <section
             class="categories"
@@ -189,6 +189,8 @@
                 <div class="category-grid">
 
 
+                    <!-- Flowers -->
+
                     <div
                         class="category-card"
                         onclick="filterProducts('flowers')">
@@ -204,6 +206,7 @@
                     </div>
 
 
+                    <!-- Flower Bouquets -->
 
                     <div
                         class="category-card"
@@ -220,6 +223,7 @@
                     </div>
 
 
+                    <!-- Balloons -->
 
                     <div
                         class="category-card"
@@ -236,6 +240,7 @@
                     </div>
 
 
+                    <!-- Teddy Bears -->
 
                     <div
                         class="category-card"
@@ -252,6 +257,7 @@
                     </div>
 
 
+                    <!-- Tailoring Materials -->
 
                     <div
                         class="category-card"
@@ -268,6 +274,7 @@
                     </div>
 
 
+                    <!-- Flower Vases -->
 
                     <div
                         class="category-card"
@@ -284,6 +291,7 @@
                     </div>
 
 
+                    <!-- Umbrellas -->
 
                     <div
                         class="category-card"
@@ -300,6 +308,7 @@
                     </div>
 
 
+                    <!-- Decoration Materials -->
 
                     <div
                         class="category-card"
@@ -323,7 +332,7 @@
 
 
 
-        <!--  SHOP / FEATURED PRODUCTS -->
+        <!-- SHOP / FEATURED PRODUCTS -->
 
         <section
             class="featured-products"
@@ -445,41 +454,38 @@
 
                 <!-- PRODUCTS -->
 
-                <div class="product-grid"
-                     id="product-grid">
+                <div
+                    class="product-grid"
+                    id="product-grid">
 
 
-                    <!-- Product 1 -->
+                    <!-- Product 1 - Flowers -->
 
                     <div
                         class="product-card"
-                        data-category="flowers flower-bouquets">
+                        data-category="flowers">
 
                         <img
-                            src="images/featured/bouquet.jpg"
-                            alt="Luxury Rose Bouquet">
-
+                            src="images/categories/flowers.jpg"
+                            alt="Flowers">
 
                         <div class="product-info">
 
                             <h3>
-                                Luxury Rose Bouquet
+                                Flowers
                             </h3>
-
 
                             <div class="stars">
                                 ★★★★★
                             </div>
 
-
                             <p class="price">
-                                ₦45,000
+                                ₦500 per piece
                             </p>
-
 
                             <button
                                 class="view-btn"
-                                onclick="openModal('rose')">
+                                onclick="openModal('flowers')">
 
                                 View Details
 
@@ -490,8 +496,44 @@
                     </div>
 
 
+                    <!-- Product 2 - Flower Bouquets -->
 
-                    <!-- Product 2 -->
+                    <div
+                        class="product-card"
+                        data-category="flower-bouquets">
+
+                        <img
+                            src="images/categories/bouquets.jpg"
+                            alt="Flower Bouquets">
+
+                        <div class="product-info">
+
+                            <h3>
+                                Luxury Flower Bouquet
+                            </h3>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                            <p class="price">
+                                ₦45,000
+                            </p>
+
+                            <button
+                                class="view-btn"
+                                onclick="openModal('bouquets')">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 3 - Teddy Bear -->
 
                     <div
                         class="product-card"
@@ -501,23 +543,19 @@
                             src="images/featured/teddy.jpg"
                             alt="Premium Teddy Bear">
 
-
                         <div class="product-info">
 
                             <h3>
                                 Premium Teddy Bear
                             </h3>
 
-
                             <div class="stars">
                                 ★★★★★
                             </div>
 
-
                             <p class="price">
                                 ₦120,000
                             </p>
-
 
                             <button
                                 class="view-btn"
@@ -532,8 +570,7 @@
                     </div>
 
 
-
-                    <!-- Product 3 -->
+                    <!-- Product 4 - Balloons -->
 
                     <div
                         class="product-card"
@@ -543,23 +580,19 @@
                             src="images/featured/balloons.jpg"
                             alt="Luxury Balloon Arrangement">
 
-
                         <div class="product-info">
 
                             <h3>
                                 Luxury Balloon Arrangement
                             </h3>
 
-
                             <div class="stars">
                                 ★★★★★
                             </div>
 
-
                             <p class="price">
                                 ₦8,000
                             </p>
-
 
                             <button
                                 class="view-btn"
@@ -574,8 +607,7 @@
                     </div>
 
 
-
-                    <!-- Product 4 -->
+                    <!-- Product 5 - Flower Vase -->
 
                     <div
                         class="product-card"
@@ -585,23 +617,19 @@
                             src="images/featured/vase.jpg"
                             alt="Elegant Flower Vase">
 
-
                         <div class="product-info">
 
                             <h3>
                                 Elegant Flower Vase
                             </h3>
 
-
                             <div class="stars">
                                 ★★★★★
                             </div>
 
-
                             <p class="price">
                                 ₦12,000
                             </p>
-
 
                             <button
                                 class="view-btn"
@@ -625,8 +653,7 @@
                     id="no-products-message"
                     style="display: none;">
 
-                    No products are available
-                    in this category yet. 🛍️
+                    No products are available in this category yet. 🛍️
 
                 </p>
 
@@ -677,7 +704,6 @@
                     </div>
 
 
-
                     <div class="why-item">
 
                         <div class="why-icon">
@@ -696,7 +722,6 @@
                     </div>
 
 
-
                     <div class="why-item">
 
                         <div class="why-icon">
@@ -713,7 +738,6 @@
                         </p>
 
                     </div>
-
 
 
                     <div class="why-item">
@@ -741,7 +765,7 @@
 
 
 
-        <!-- ABOUT US  -->
+        <!-- ABOUT US -->
 
         <section
             class="about-us"
@@ -759,7 +783,6 @@
                             alt="GreatChy Gifts and Decor">
 
                     </div>
-
 
 
                     <div class="about-text">
@@ -865,7 +888,7 @@
 
 
 
-        <!-- CONTACT  -->
+        <!-- CONTACT -->
 
         <section
             class="contact"
@@ -906,7 +929,6 @@
                         </div>
 
 
-
                         <div class="contact-item">
 
                             <h3>
@@ -918,7 +940,6 @@
                             </p>
 
                         </div>
-
 
 
                         <div class="contact-item">
@@ -934,7 +955,6 @@
                         </div>
 
                     </div>
-
 
 
                     <form class="contact-form">
@@ -971,7 +991,7 @@
 
 
 
-        <!--  FOOTER  -->
+        <!-- FOOTER -->
 
         <footer class="footer">
 
@@ -992,7 +1012,6 @@
                         </p>
 
                     </div>
-
 
 
                     <div class="footer-links">
@@ -1024,7 +1043,6 @@
                     </div>
 
 
-
                     <div class="footer-contact">
 
                         <h3>
@@ -1046,7 +1064,6 @@
                     </div>
 
                 </div>
-
 
 
                 <div class="footer-bottom">
@@ -1075,4 +1092,3 @@
 </body>
 
 </html>
-

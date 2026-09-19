@@ -1,11 +1,10 @@
-javascript
 console.log("Welcome to GreatChy Gifts & Decor!");
 
 
 let selectedProduct = {};
 
 
-/* PRODUCT MODAL  */
+/* PRODUCT MODAL */
 
 function openModal(product) {
 
@@ -25,28 +24,29 @@ function openModal(product) {
         document.getElementById("modalDescription");
 
 
-    if (product === "rose") {
+    /* FLOWERS - TAILORING/DRESS FLOWERS */
+
+    if (product === "flowers") {
 
         image.src =
-            "images/featured/bouquet.jpg";
+            "images/categories/flowers.jpg";
 
         title.textContent =
-            "Luxury Rose Bouquet";
+            "Flowers";
 
         price.textContent =
-            "₦45,000";
+            "₦500 per piece";
 
         description.textContent =
-            "A beautiful premium rose arrangement perfect for birthdays, anniversaries and special moments.";
-
+            "Beautiful decorative flowers perfect for dresses, tailoring and creative designs.";
 
         selectedProduct = {
 
-            name: "Luxury Rose Bouquet",
+            name: "Flowers",
 
-            price: 45000,
+            price: 500,
 
-            image: "images/featured/bouquet.jpg",
+            image: "images/categories/flowers.jpg",
 
             quantity: 1
 
@@ -54,6 +54,39 @@ function openModal(product) {
 
     }
 
+
+    /* FLOWER BOUQUETS */
+
+    else if (product === "bouquets") {
+
+        image.src =
+            "images/categories/bouquets.jpg";
+
+        title.textContent =
+            "Luxury Flower Bouquet";
+
+        price.textContent =
+            "₦45,000";
+
+        description.textContent =
+            "An elegant flower bouquet perfect for birthdays, anniversaries, celebrations and special surprises.";
+
+        selectedProduct = {
+
+            name: "Luxury Flower Bouquet",
+
+            price: 45000,
+
+            image: "images/categories/bouquets.jpg",
+
+            quantity: 1
+
+        };
+
+    }
+
+
+    /* TEDDY BEAR */
 
     else if (product === "teddy") {
 
@@ -68,7 +101,6 @@ function openModal(product) {
 
         description.textContent =
             "A soft luxury teddy bear gift designed to make every celebration memorable.";
-
 
         selectedProduct = {
 
@@ -85,6 +117,8 @@ function openModal(product) {
     }
 
 
+    /* BALLOONS */
+
     else if (product === "balloon") {
 
         image.src =
@@ -98,7 +132,6 @@ function openModal(product) {
 
         description.textContent =
             "Beautiful balloon decoration suitable for birthdays, surprises and celebrations.";
-
 
         selectedProduct = {
 
@@ -115,6 +148,8 @@ function openModal(product) {
     }
 
 
+    /* FLOWER VASE */
+
     else if (product === "vase") {
 
         image.src =
@@ -128,7 +163,6 @@ function openModal(product) {
 
         description.textContent =
             "A stylish flower vase that adds elegance to any space.";
-
 
         selectedProduct = {
 
@@ -186,7 +220,6 @@ function addToCart() {
 
     }
 
-
     else {
 
         cart.push({
@@ -212,7 +245,7 @@ function addToCart() {
 }
 
 
-/* FILTER PRODUCTS  */
+/* FILTER PRODUCTS */
 
 function filterProducts(category) {
 
@@ -233,8 +266,7 @@ function filterProducts(category) {
     products.forEach(product => {
 
         const productCategories =
-            product.dataset.category
-                .split(" ");
+            product.dataset.category.split(" ");
 
 
         if (
@@ -257,9 +289,6 @@ function filterProducts(category) {
     });
 
 
-    /* Show message if category
-       has no products */
-
     if (visibleProducts === 0) {
 
         noProductsMessage.style.display =
@@ -275,8 +304,6 @@ function filterProducts(category) {
     }
 
 
-    /* Scroll to shop */
-
     document.getElementById(
         "shop"
     ).scrollIntoView({
@@ -288,7 +315,7 @@ function filterProducts(category) {
 }
 
 
-/* CLOSE MODAL WHEN CLICKING OUTSIDE THE MODAL */
+/* CLOSE MODAL WHEN CLICKING OUTSIDE */
 
 window.addEventListener(
     "click",
