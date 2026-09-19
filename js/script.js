@@ -93,3 +93,4 @@ function addToCart(){
     window.location.href = "cart.html";
 
 }
+
