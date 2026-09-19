@@ -289,6 +289,25 @@ body {
 }
 
 
+/* SHOP FILTER BUTTONS */
+
+.shop-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.shop-filters .view-btn {
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+
 /* PRODUCT MODAL */
 
 .modal {
@@ -952,5 +971,9 @@ body {
     .modal-content {
         width: 90%;
         max-width: 400px;
+    }
+
+    .shop-filters {
+        justify-content: center;
     }
 }

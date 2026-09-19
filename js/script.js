@@ -24,12 +24,12 @@ function openModal(product) {
         document.getElementById("modalDescription");
 
 
-    /* FLOWERS - TAILORING/DRESS FLOWERS */
+    /* FLOWERS */
 
     if (product === "flowers") {
 
         image.src =
-            "images/categories/flowers.jpg";
+            "images/categories/tailoring materials/flowers.jpg";
 
         title.textContent =
             "Flowers";
@@ -46,7 +46,8 @@ function openModal(product) {
 
             price: 500,
 
-            image: "images/categories/flowers.jpg",
+            image:
+                "images/categories/tailoring materials/flowers.jpg",
 
             quantity: 1
 
@@ -77,7 +78,8 @@ function openModal(product) {
 
             price: 45000,
 
-            image: "images/categories/bouquets.jpg",
+            image:
+                "images/categories/bouquets.jpg",
 
             quantity: 1
 
@@ -91,7 +93,7 @@ function openModal(product) {
     else if (product === "teddy") {
 
         image.src =
-            "images/featured/teddy.jpg";
+            "images/categories/teddy-bears.jpg";
 
         title.textContent =
             "Premium Teddy Bear";
@@ -108,7 +110,8 @@ function openModal(product) {
 
             price: 120000,
 
-            image: "images/featured/teddy.jpg",
+            image:
+                "images/categories/teddy-bears.jpg",
 
             quantity: 1
 
@@ -139,7 +142,8 @@ function openModal(product) {
 
             price: 8000,
 
-            image: "images/featured/balloons.jpg",
+            image:
+                "images/featured/balloons.jpg",
 
             quantity: 1
 
@@ -170,7 +174,200 @@ function openModal(product) {
 
             price: 12000,
 
-            image: "images/featured/vase.jpg",
+            image:
+                "images/featured/vase.jpg",
+
+            quantity: 1
+
+        };
+
+    }
+
+
+    /* APLIQUE */
+
+    else if (product === "aplique") {
+
+        image.src =
+            "images/categories/tailoring materials/aplique.jpg";
+
+        title.textContent =
+            "Aplique";
+
+        price.textContent =
+            "₦10,000 per yard";
+
+        description.textContent =
+            "Beautiful decorative aplique material suitable for tailoring, dresses and creative fashion designs.";
+
+        selectedProduct = {
+
+            name: "Aplique",
+
+            price: 10000,
+
+            image:
+                "images/categories/tailoring materials/aplique.jpg",
+
+            quantity: 1
+
+        };
+
+    }
+
+
+    /* FRINGE */
+
+    else if (product === "fringe") {
+
+        image.src =
+            "images/categories/tailoring materials/fringe.jpg";
+
+        title.textContent =
+            "Fringe";
+
+        price.textContent =
+            "20-inch — ₦2,500 per yard";
+
+        description.textContent =
+            "20-inch decorative fringe material suitable for dresses, tailoring and fashion embellishments.";
+
+        selectedProduct = {
+
+            name: "Fringe",
+
+            price: 2500,
+
+            image:
+                "images/categories/tailoring materials/fringe.jpg",
+
+            quantity: 1
+
+        };
+
+    }
+
+
+    /* ABA LINEN */
+
+    else if (product === "aba-linen") {
+
+        image.src =
+            "images/categories/tailoring materials/linen.jpg";
+
+        title.textContent =
+            "Aba Linen";
+
+        price.textContent =
+            "₦500 per yard";
+
+        description.textContent =
+            "Aba Linen suitable for tailoring and creative fashion designs.";
+
+        selectedProduct = {
+
+            name: "Aba Linen",
+
+            price: 500,
+
+            image:
+                "images/categories/tailoring materials/linen.jpg",
+
+            quantity: 1
+
+        };
+
+    }
+
+
+    /* MP4 LINEN */
+
+    else if (product === "mp4-linen") {
+
+        image.src =
+            "images/categories/tailoring materials/linen.jpg";
+
+        title.textContent =
+            "MP4 Linen";
+
+        price.textContent =
+            "₦500 per yard";
+
+        description.textContent =
+            "MP4 Linen suitable for tailoring and creative fashion designs.";
+
+        selectedProduct = {
+
+            name: "MP4 Linen",
+
+            price: 500,
+
+            image:
+                "images/categories/tailoring materials/linen.jpg",
+
+            quantity: 1
+
+        };
+
+    }
+
+
+    /* MBJ LINEN */
+
+    else if (product === "mbj-linen") {
+
+        image.src =
+            "images/categories/tailoring materials/linen.jpg";
+
+        title.textContent =
+            "MBJ Linen";
+
+        price.textContent =
+            "₦1,000 per yard";
+
+        description.textContent =
+            "MBJ Linen suitable for tailoring and creative fashion designs.";
+
+        selectedProduct = {
+
+            name: "MBJ Linen",
+
+            price: 1000,
+
+            image:
+                "images/categories/tailoring materials/linen.jpg",
+
+            quantity: 1
+
+        };
+
+    }
+
+
+    /* SATIN */
+
+    else if (product === "satin") {
+
+        image.src =
+            "images/categories/tailoring materials/satin.jpg";
+
+        title.textContent =
+            "Satin";
+
+        price.textContent =
+            "₦1,200 per yard";
+
+        description.textContent =
+            "Smooth and elegant satin material suitable for dresses, tailoring and creative fashion designs.";
+
+        selectedProduct = {
+
+            name: "Satin",
+
+            price: 1200,
+
+            image:
+                "images/categories/tailoring materials/satin.jpg",
 
             quantity: 1
 

@@ -3,13 +3,22 @@ console.log("Checkout page loaded 🛒");
 
 /* LOAD CART */
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart =
+    JSON.parse(
+        localStorage.getItem("cart")
+    ) || [];
+
 
 const checkoutItems =
-    document.getElementById("checkout-items");
+    document.getElementById(
+        "checkout-items"
+    );
+
 
 const checkoutTotal =
-    document.getElementById("checkout-total");
+    document.getElementById(
+        "checkout-total"
+    );
 
 
 /* DISPLAY CART */
@@ -20,6 +29,7 @@ let total = 0;
 if (cart.length === 0) {
 
     checkoutItems.innerHTML = `
+
         <div class="empty-checkout">
 
             <p>
@@ -27,11 +37,15 @@ if (cart.length === 0) {
             </p>
 
             <a href="index.html#shop">
+
                 Continue Shopping
+
             </a>
 
         </div>
+
     `;
+
 
     checkoutTotal.textContent = "₦0";
 
@@ -42,10 +56,13 @@ else {
 
     cart.forEach((product) => {
 
-        const quantity = product.quantity || 1;
+        const quantity =
+            product.quantity || 1;
+
 
         const subtotal =
             product.price * quantity;
+
 
         total += subtotal;
 
@@ -58,16 +75,19 @@ else {
                     src="${product.image}"
                     alt="${product.name}">
 
+
                 <div>
 
                     <h4>
                         ${product.name}
                     </h4>
 
+
                     <p>
                         Quantity:
                         ${quantity}
                     </p>
+
 
                     <p>
                         ₦${subtotal.toLocaleString()}
@@ -78,18 +98,22 @@ else {
             </div>
 
         `;
+
     });
 
 
     checkoutTotal.textContent =
         "₦" + total.toLocaleString();
+
 }
 
 
 /* CHECKOUT FORM */
 
 const checkoutForm =
-    document.getElementById("checkout-form");
+    document.getElementById(
+        "checkout-form"
+    );
 
 
 if (checkoutForm) {
@@ -108,6 +132,7 @@ if (checkoutForm) {
                 );
 
                 return;
+
             }
 
 
@@ -116,15 +141,17 @@ if (checkoutForm) {
             );
 
 
-            /* Clear cart after successful order */
+            /* CLEAR CART */
 
             localStorage.removeItem("cart");
 
 
-            /* Return to shop */
+            /* RETURN TO SHOP */
 
-            window.location.href = "index.html";
+            window.location.href =
+                "index.html";
 
         }
     );
+
 }
